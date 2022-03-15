@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class gen<T,V>
+{
+	T ob1;
+	V ob2;
+	gen(T o1,V o2)
+	{
+		ob1=o1;
+		ob2=o2;
+	}
+	void showtype()
+	{
+		System.out.println("TYPE OF ob1:"+ob1.getClass().getName());
+		System.out.println("TYPE OF ob2:"+ob2.getClass().getName());
+	}
+	T getob1()
+	{ return ob1;}
+	V getob2()
+	{ return ob2;}
+}
+
+class Main
+{
+	public static void main(String args[])
+	{
+		Scanner sn=new Scanner(System.in);
+		System.out.println("Enter a string");
+		String st=sn.nextLine();
+		System.out.println("Enter an Integer");
+		int i=sn.nextInt();
+		gen<String,Integer> obj=new gen<String,Integer>(st,i);
+		obj.showtype();
+		String a=obj.getob1();
+		System.out.println(a);
+		int b=obj.getob2();
+		System.out.println(b);
+	}
+}
+		
